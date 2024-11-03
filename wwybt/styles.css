@@ -1,0 +1,61 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+}
+
+.container {
+    text-align: center;
+}
+
+#image-display-container {
+    position: relative;
+    text-align: center;
+}
+
+#image-display img {
+    max-width: 100%;
+    max-height: 500px;
+    display: block;
+    margin: 0 auto;
+}
+
+.message {
+    font-size: 24px;
+    color: #000;
+    margin: 20px 0;
+}
+
+#top-message {
+    position: absolute;
+    top: 20px;
+    width: 100%;
+    font-size: 28px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Add some shadow for better readability */
+}
+
+#bottom-message {
+    margin-top: 20px;
+}
+
+audio {
+    display: none;  /* Hide the audio player */
+}
+
+#name-input {
+    padding: 10px;
+    font-size: 16px;
+}
+
+#go-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin-top: 10px;
+}
+

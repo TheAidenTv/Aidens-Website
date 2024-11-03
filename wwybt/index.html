@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image and Audio Player</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <input type="file" id="image-upload" accept="image/*">
+        
+        <div id="name-input-container">
+            <input type="text" id="name-input" placeholder="Enter your name">
+        </div>
+
+        <button id="go-button" style="display: none;">Go</button>
+
+        <div id="image-display-container" style="display: none;">
+            <p id="top-message" class="message"></p>
+            <div id="image-display"></div>
+            <h2 id="bottom-message" class="message">That's the question.</h2>
+        </div>
+
+        <audio id="audio-player">
+            <source src="gru.mp3" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
