@@ -1,38 +1,24 @@
 on:
   push:
     branches:
-    - main
+      - main
 
 jobs:
   Deploy:
-      name: Deploy site changes to aidentimmons.com
-      runs-on: windows-latest
+    name: Deploy site changes to aidentimmons.com
+    runs-on: ubuntu-latest
   
-      steps:
+    steps:
       - name: Checkout the repository
         uses: actions/checkout@v4
       
       - run: echo "💡 The ${{ github.repository }} repository has been cloned to the runner."
 
       - name: Cloudflare Pages GitHub Action
-        # You may pin to the exact commit or the version.
-        # uses: cloudflare/pages-action@f0a1cd58cd66095dee69bfa18fa5efd1dde93bca
         uses: cloudflare/pages-action@v1.5.0
         with:
-          # Cloudflare API Token
           apiToken: ${{ secrets.CF_API_TOKEN }}
-          # Cloudflare Account ID
           accountId: ${{ secrets.CF_ACCOUNT_ID }}
-          # The name of the Pages project to upload to
           projectName: ${{ secrets.CF_PROJECT_NAME }}
-          # The directory of static assets to upload
-          directory: .
-          # The name of the branch you want to deploy to
+          directory: .  # Deploys from the root directory
           branch: main
-          # The working directory in which to run Wrangler
-          workingDirectory: .
-          # The version of Wrangler to use
-          wranglerVersion: 2
-          
-  
-      
