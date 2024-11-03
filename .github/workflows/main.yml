@@ -1,0 +1,24 @@
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  Deploy:
+    name: Deploy site changes to aidentimmons.com
+    runs-on: ubuntu-latest
+  
+    steps:
+      - name: Checkout the repository
+        uses: actions/checkout@v4
+      
+      - run: echo "💡 The ${{ github.repository }} repository has been cloned to the runner."
+
+      - name: Cloudflare Pages GitHub Action
+        uses: cloudflare/pages-action@v1.5.0
+        with:
+          apiToken: ${{ secrets.CF_API_TOKEN }}
+          accountId: ${{ secrets.CF_ACCOUNT_ID }}
+          projectName: ${{ secrets.CF_PROJECT_NAME }}
+          directory: .  # Deploys from the root directory
+          branch: main
