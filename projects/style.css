@@ -11,21 +11,12 @@ body {
     flex-direction: column;
 }
 
-/* Header */
-.header {
-    width: 100%;
-    padding: 20px;
-    background-color: #34495e; /* Dark background for header */
-    text-align: center;
-    font-size: 1.5em;
-    font-weight: bold;
-}
-
 /* Projects Container */
 .projects-container {
-    max-width: 1000px;
+    max-width: 2000px;
     padding: 20px;
 }
+
 
 .projects-title {
     text-align: center;
@@ -41,9 +32,28 @@ body {
     gap: 20px;
 }
 
+@media (min-width: 600px) {
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for screens 600px and larger */
+    }
+}
+
+@media (min-width: 900px) {
+    .projects-grid {
+        grid-template-columns: repeat(3, 1fr); /* 3 columns for screens 900px and larger */
+    }
+}
+
+@media (min-width: 1200px) {
+    .projects-grid {
+        grid-template-columns: repeat(4, 1fr); /* 4 columns for screens 1200px and larger */
+    }
+}
+
+
 /* Project Card */
 .project-card {
-    background-color: #4daade; /* Blue background for cards */
+    background-color: #2c3e50b9; /* Blue background for cards */
     padding: 20px;
     border-radius: 10px;
     text-align: center;
