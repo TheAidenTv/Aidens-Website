@@ -90,5 +90,6 @@ body {
 }
 
 .project-link:hover {
-    background-color: #4daade; /* Lighten on hover */
+    background-color: #1bac8f; /* Darken on hover */
+    color: white;
 }
