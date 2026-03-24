@@ -1,17 +1,100 @@
 <!DOCTYPE html>
-<html lang="en">
+<html data-bs-theme="light" lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aiden's Snake Game</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Snake | Aiden's Website</title>
+    <meta name="description" content="Play Aiden's snake game on desktop or mobile.">
+    <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="../assets/img/Profile%20Pics/Profile180.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/img/Profile%20Pics/Profile16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/Profile%20Pics/Profile32.png">
+    <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Space+Mono">
+    <link rel="stylesheet" href="../assets/fonts/fontawesome-all.min.css">
+    <link rel="stylesheet" href="../assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="../assets/fonts/fontawesome5-overrides.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-    <div class="container">
-        <h1>Aiden's Snake Game</h1>
-        <div id="gameContainer"></div>
-        <p class="instructions">Use arrow keys to control the snake. Press space to restart the game after it's over.</p>
-    </div>
+
+<body id="page-top">
+    <nav class="navbar navbar-expand-lg fixed-top bg-secondary text-uppercase navbar-light" id="mainNav" style="background:#2c3e50;">
+        <div class="container"><a class="navbar-brand" href="../">Aidens Website</a><button data-bs-toggle="collapse" data-bs-target="#navbarResponsive" class="navbar-toggler text-uppercase text-white bg-primary navbar-toggler-right rounded" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><i class="fas fa-bars"></i></button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="../">Home</a></li>
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="../#about">About</a></li>
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="../projects/">Projects</a></li>
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="../yesorno/">Decision Maker</a></li>
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded active" href="./">Snake</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="snake-page">
+        <section class="snake-hero">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-9 col-xl-8">
+                        <section class="game-panel" aria-labelledby="snake-title">
+                            <div class="game-panel__header">
+                                <div>
+                                    <p class="game-panel__label">Arcade Project</p>
+                                    <h1 id="snake-title">Snake</h1>
+                                </div>
+                            </div>
+
+                            <div class="game-panel__body">
+                                <div class="board-panel">
+                                    <div class="board-status">
+                                        <div class="board-status__copy">
+                                            <span class="status-pill" id="game-status" data-state="idle">Ready</span>
+                                            <p class="status-text" id="statusMessage" aria-live="polite">Press any direction to start.</p>
+                                        </div>
+                                        <div class="score-card" aria-live="polite">
+                                            <span class="score-card__label">Score</span>
+                                            <strong class="score-card__value" id="score">0</strong>
+                                        </div>
+                                    </div>
+
+                                    <div class="board-frame">
+                                        <div id="gameContainer" class="game-board" role="grid" aria-label="Snake game board"></div>
+                                    </div>
+
+                                    <div class="game-actions">
+                                        <button class="btn btn-primary btn-xl" id="restartButton" type="button">
+                                            <i class="fas fa-play me-2"></i><span id="restartLabel">Start Game</span>
+                                        </button>
+                                    </div>
+
+                                    <div class="touch-controls" aria-label="Touch controls">
+                                        <button class="control-button control-button--up" type="button" data-direction="UP" aria-label="Move up">
+                                            <i class="fas fa-chevron-up" aria-hidden="true"></i>
+                                        </button>
+                                        <button class="control-button control-button--left" type="button" data-direction="LEFT" aria-label="Move left">
+                                            <i class="fas fa-chevron-left" aria-hidden="true"></i>
+                                        </button>
+                                        <button class="control-button control-button--down" type="button" data-direction="DOWN" aria-label="Move down">
+                                            <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                                        </button>
+                                        <button class="control-button control-button--right" type="button" data-direction="RIGHT" aria-label="Move right">
+                                            <i class="fas fa-chevron-right" aria-hidden="true"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="../assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="script.js"></script>
 </body>
+
 </html>
