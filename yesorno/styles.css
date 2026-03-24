@@ -72,14 +72,14 @@ h2,
 }
 
 .btn-primary {
-    border-color: var(--brand-slate);
-    background-color: var(--brand-slate);
+    border-color: var(--brand-green);
+    background-color: var(--brand-green);
 }
 
 .btn-primary:hover,
 .btn-primary:focus {
-    border-color: var(--brand-slate-deep);
-    background-color: var(--brand-slate-deep);
+    border-color: var(--brand-green-dark);
+    background-color: var(--brand-green-dark);
 }
 
 .btn-outline-light:hover,
@@ -88,8 +88,12 @@ h2,
 }
 
 .btn:disabled {
-    opacity: 0.8;
+    opacity: 1;
     cursor: wait;
+    border-color: rgba(255, 255, 255, 0.18);
+    background-color: rgba(255, 255, 255, 0.18);
+    color: rgba(255, 255, 255, 0.78);
+    box-shadow: none;
 }
 
 .answer-panel {
